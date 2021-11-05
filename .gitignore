@@ -1,0 +1,7 @@
+node_modules
+dist
+.pomoce
+.vscode
+.env
+*.avi
+*.mp4

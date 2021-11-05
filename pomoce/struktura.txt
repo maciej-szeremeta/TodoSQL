@@ -1,0 +1,50 @@
+*** Struktura ***
+
+.
+|--/app
+|     |--/controller
+|     |    |--company.controller.js
+|     |
+|     |--/db
+|     |    |--/models
+|     |    |    |--company.model.js
+|     |    |--mongoose.js
+|     |    |--validators.js
+|     |   
+|     |--/middleware
+|     |    |--view.middleware.js
+|     |  
+|     |--/routes
+|     |    |--web.rotes.js
+|     |
+|     |--app.js
+|     |--config.js
+|     |--server.js
+|
+|--/data
+|     |--db.txt
+|
+|--/public
+|     |--/img
+|     |    |--obraz.jpg
+|     |--/js
+|     |    |--script.js
+|     |--/css
+|          |--style.css
+|
+|--/views
+|     |--/errors
+|     |     |--404.hbs
+|     |--/layouts
+|     |     |--main.hbs
+|     |     |--minimalistic.hbs
+|     |--/pages
+|     |     |--home.hbs
+|     |     |--about.hbs
+|     |--/partials
+|           |--header.hbs
+|           |--footer.hbs
+|
+|--package.json 
+|--.env
+|--.env.example
