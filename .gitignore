@@ -1,7 +1,30 @@
+# dependecies
 node_modules
-dist
-.pomoce
-.vscode
+node_modules/
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/dist
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+/pomoce
+/.vscode
+/.idea
 .env
 *.avi
 *.mp4
+.gitignore
+.prettierc
+.eslintrc.json
+.babelrc

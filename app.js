@@ -2,12 +2,13 @@ const express = require('express');
 const hbs = require('express-handlebars');
 const methodOverride = require('method-override');
 
-const { clientRouter } = require('./routers/client');
+const { todoRouter } = require('./routers/todo');
 const { homeRouter } = require('./routers/home');
-
-const { db } = require('./utils/db');
+const { handleError } = require('./utils/errors');
 
 const app = express();
+
+const port = process.env.PORT || 3000;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -26,8 +27,8 @@ app.engine(
 app.set('view engine', '.hbs');
 
 app.use('/', homeRouter);
-app.use('/client', clientRouter);
+app.use('/todo', todoRouter);
 
-app.listen(3000, '0.0.0.0', () =>
-  console.log('Server started at http://localhost:3000')
-);
+app.use(handleError);
+
+app.listen(port, () => console.log(`Server started..`));

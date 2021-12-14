@@ -14,11 +14,19 @@ tr:nth-child(even) {
 }
 
 thead tr,
-.header-of-left th{
+.header-of-left th {
   background-color: rgb(247, 185, 185);
 }
 
 td,
 th {
   padding: 6px;
+}
+
+.error {
+  background: rgb(230, 17, 17);
+  border: 2px solid red;
+  padding: 20px;
+  margin: 10px auto;
+  width: 80%;
 }

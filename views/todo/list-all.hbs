@@ -1,0 +1,31 @@
+<table>
+  <thead>
+    <tr>
+      <th>Lp.</th>
+      <th>Task</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each tasks}}
+      <tr>
+        <th>
+          {{lp @index}}
+        </th>
+        <th>
+          {{this.title}}
+        </th>
+        <td>
+          <a href="/todo/{{this.id}}">More</a>
+          <form method="POST" action="/todo/{{this.id}}/?_method=DELETE">
+            <button type="submit">Delete</button>
+          </form>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
+
+<a href="/todo/form/add">Add Task</a>
+
+<script src="script.js"></script>

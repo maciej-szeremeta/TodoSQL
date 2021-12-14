@@ -1,0 +1,12 @@
+<h2>Editing {{task.title}} (<small>{{task.id}}</small>)</h2>
+
+<form method="POST" action="/todo/{{task.id}}?_method=PUT" autocomplete="off">
+  <p>
+    <label for="title">Task</label>
+    <br />
+    <input type="text" name="title" id="title" value="{{task.title}}"/>
+  </p>
+  <p>
+    <button type="submit">Update</button>
+  </p>
+</form>
