@@ -8,6 +8,8 @@ class TodoRecord {
     const { id, title } = obj;
     this.id = id;
     this.title = title;
+    
+    this._validate();
   }
 
   _validate() {
@@ -80,7 +82,7 @@ class TodoRecord {
     const [results] = await pool.execute(
       'SELECT * FROM `todos` ORDER BY `createdAt`;'
     );
-    return results;
+    return results.map(result => new TodoRecord(result));
   }
 }
 
